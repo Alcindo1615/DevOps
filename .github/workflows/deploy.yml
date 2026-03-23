@@ -14,9 +14,9 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Crear clave SSH2
+      - name: Crear clave SSH
         run: |
-          echo "${{ secrets.EC2_SSH2_KEY }}" > key.pem
+          echo "${{ secrets.EC2_SSH_KEY }}" > key.pem
           chmod 400 key.pem
 
       - name: Copiar archivos al servidor
